@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Health Tips - {{ category }}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>Health Tips for {{ category }}</h1>
+
+    <ul class="tips-list">
+        {% for t in tips %}
+            <li>{{ t }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/" class="btn">Back to Home</a>
+
+</div>
+
+{% endblock %}
