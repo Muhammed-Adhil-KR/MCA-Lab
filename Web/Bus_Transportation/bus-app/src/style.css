@@ -1,0 +1,79 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center container */
+.container {
+  width: 400px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Bus list cards */
+.bus-card {
+  background-color: #ffffff;
+  padding: 15px;
+  margin: 10px auto;
+  width: 450px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.bus-card p {
+  margin: 5px 0;
+  color: #444;
+}
+
+/* Confirmation page */
+.confirmation {
+  width: 400px;
+  margin: 60px auto;
+  background-color: #e9ffe9;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #28a745;
+}
+
+.confirmation p {
+  margin: 8px 0;
+  font-weight: bold;
+}

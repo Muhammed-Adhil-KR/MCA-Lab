@@ -1,0 +1,6 @@
+n=int(input("Enter number  of rows: "))
+print(" * "*(n-1))
+print(" * ")
+print(" * "*(n-2))
+print(" * ")
+print(" * ")
