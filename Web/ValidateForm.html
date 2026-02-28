@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration Form Validation</title>
+    <link rel="stylesheet" type="text/css" href="ValidateStyle.css" />
+</head>
+<body>
+    <div class="container">
+        <h2 align="center">Registration Form</h2>
+        <form id="regForm" onsubmit="return validateForm()">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" />
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" />Male
+            <input type="radio" name="gender" value="Female" />Female
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" />
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" placeholder="1234567890" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="example@example.com" />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter password" />
+
+            <div id="errorMessage" class="error"></div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value.trim();
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const dob = document.getElementById("dob").value;
+            const phone = document.getElementById("phone").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const error = document.getElementById("errorMessage");
+            error.textContent = "";
+
+            if (name === "") {
+                error.textContent = "Please enter your name.";
+                return false;
+            }
+            if (!gender) {
+                error.textContent = "Please select your gender.";
+                return false;
+            }
+            if (dob === "") {
+                error.textContent = "Please enter your date of birth.";
+                return false;
+            }
+            const phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                error.textContent = "Please enter a valid 10-digit phone number.";
+                return false;
+            }
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                error.textContent = "Please enter a valid email address.";
+                return false;
+            }
+            if (password.length < 6) {
+                error.textContent = "Password must be at least 6 characters long.";
+                return false;
+            }
+
+            alert("Registration successful!");
+            return true;
+        }
+    </script>
+</body>
+</html>

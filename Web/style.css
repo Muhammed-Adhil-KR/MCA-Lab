@@ -1,0 +1,13 @@
+.box{
+    border: 2px solid #4caf50;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    background-color: aliceblue;
+    font-size: 40px;
+    font-style: italic;
+}
+/* .box.p{
+    color: #b0095d;
+    font-size: 15px;
+} */

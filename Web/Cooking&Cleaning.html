@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking and Cleaning</title>
+</head>
+<body>
+    <h2>Kitchen Tasks</h2>
+    <p id="status"></p>
+    <script>
+        const status=document.getElementById("status");
+        function addMessage(message)
+        {
+            status.innerHTML+=message+"<br>";
+        }
+        function cook()
+        {
+            addMessage("Cooking started..");
+            setTimeout(()=>{addMessage("Cooking Finished!");},3000);
+        }
+        function cleanKitchen()
+        {
+            addMessage("Kitchen cleaning started...");
+            addMessage("Kitchen cleaning finished!");
+        }
+        cook();
+        cleanKitchen();
+    </script>
+</body>
+</html>

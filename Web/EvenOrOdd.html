@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvenOrOdd</title>
+    <style>
+      div.Box{
+        border:1px;
+        margin:auto;
+        /* background-color: lightblue; */
+        border-width: 50%;
+        padding: 20px 30px;
+      }
+      p{
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 20px;
+      }
+    </style>
+</head>
+<body>
+  <center>
+    <h1 style="color: darkred;">Even or Odd Checker</h1><BR><BR>
+    <div class="Box">
+      <label for="num" style="font-size: 20px;">Enter a number: </label>
+      <input type="number" id="num">
+      <br><br><br>
+      <button onclick="checkNumber()" >Check</button>
+      <p id="result"></p>
+    </div>
+    <script>
+        function checkNumber()
+        {
+            let num=document.getElementById("num").value;
+            let result="";
+
+            if(num=="")
+              {
+                result="Please enter a number!";
+              }
+            else if(num%2==0)
+                  {
+                    result=num+" is an Even number.";
+                  }
+                else{
+                    result=num+" is an Odd number.";
+                }
+            document.getElementById("result").innerText=result;
+        }
+    </script>
+</body>
+</html>

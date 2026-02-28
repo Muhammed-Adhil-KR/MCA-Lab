@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Book Display</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      margin: 20px auto;
+      max-width: 900px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 100px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 50px;
+      color: #b51313;
+    }
+    .grid-container {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
+      gap: 30px;
+    }
+    .book-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1); 
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    } 
+    .book-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+    .book-info {
+      padding: 15px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: #222;
+    }
+    .author {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 12px;
+    }
+    .availability {
+      align-self: flex-start;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: white;
+      user-select: none;
+    }
+    .available {
+      background-color: #4caf50;
+    }
+    .unavailable {
+      background-color: #f44336;
+    } 
+  </style>
+</head>
+<body>
+
+  <h1>Library Book Display</h1>
+
+  <div class="grid-container">
+
+    <div class="book-card">
+      <img class="book-image" src="https://m.media-amazon.com/images/I/81q77Q39nEL._UF1000,1000_QL80_.jpg" />
+      <div class="book-info">
+        <div>
+          <div class="title">Harry Potter</div>
+          <div class="author">J.K Rowling</div>
+        </div>
+        <div class="availability available">Available</div>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img class="book-image" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQzlnFVCU2ZcD1K0_5dHip_Uv-fIMCAx3i10XbqWgKLZO9GouV6" alt="To Kill a Mockingbird Book Cover" />
+      <div class="book-info">
+        <div>
+          <div class="title">The Hobbit</div>
+          <div class="author">J. R. R. Tolkien</div>
+        </div>
+        <div class="availability unavailable">Unavailable</div>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img class="book-image" src="https://skyhorse-us.imgix.net/covers/9781949846386.jpg?auto=format&w=298" alt="The Great Gatsby Book Cover" />
+      <div class="book-info">
+        <div>
+          <div class="title">The Great Gatsby</div>
+          <div class="author">F. Scott Fitzgerald</div>
+        </div>
+        <div class="availability unavailable">Unavailable</div>
+      </div>
+    </div>
+
+    <div class="book-card">
+        <img class="book-image" src="https://m.media-amazon.com/images/I/71P+4DslKmL._UF1000,1000_QL80_.jpg" alt="A Game of Thrones Book Cover" />
+        <div class="book-info">
+          <div>
+            <div class="title">A Game of Thrones</div>
+            <div class="author">George R.R Martin</div>
+          </div>
+          <div class="availability available">Available</div>
+        </div>
+      </div>
+
+  </div>
+
+</body>
+</html>

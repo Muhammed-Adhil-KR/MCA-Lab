@@ -1,0 +1,17 @@
+hiiii
+
+sys.float.info
+import sys
+sys.float_info
+int ('101',2)
+int ('101',8)
+int ('101',16)
+int ('101',10)
+int ('1111',2)
+int ('11112',2)
+int ('6E5732',16)
+int ('6E 57 32',16)
+int ('6E',16)
+int ('57',16)
+int ('32',16)
+int ('010',8)

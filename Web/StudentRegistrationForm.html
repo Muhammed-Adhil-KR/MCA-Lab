@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>Student Registration Form</title>
+        <style>
+            body {
+              font-family: Arial, sans-serif;
+              background-color:whitesmoke;
+              margin: 20px;
+              color: #333;
+            }
+          
+            .container {
+              max-width: 700px;
+              margin: auto;
+              background:white;
+              padding: 20px 30px;
+              border: 1px solid #ddd;
+              border-radius: 6px;
+            }
+          
+            h1 {
+              text-align: center;
+              margin-bottom: 25px;
+              font-weight: normal;
+            }
+          
+            fieldset {
+              border: 1px solid #ccc;
+              padding: 20px;
+              margin-bottom: 25px;
+              border-radius: 4px;
+            }
+          
+            legend {
+              font-weight: bold;
+              padding: 0 8px;
+            }
+          
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+          
+            td {
+              padding: 8px 10px;
+              vertical-align: top;
+            }
+          
+            label {
+              cursor: pointer;
+            }
+          
+            input[type="text"],
+            input[type="date"],
+            input[type="tel"],
+            textarea {
+              width: 100%;
+              padding: 6px 8px;
+              box-sizing: border-box;
+              border: 1px solid #bbb;
+              border-radius: 3px;
+            }
+          
+            input[type="radio"],
+            input[type="checkbox"] {
+              margin-right: 6px;
+            }
+          
+            .course-selection label {
+              margin-right: 20px;
+            }
+          
+            button[type="submit"] {
+              display: block;
+              width: 100%;
+              padding: 10px 0;
+              background-color: #007acc;
+              color: white;
+              font-size: 16px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+          
+            button[type="submit"]:hover {
+              background-color: #005fa3;
+            }
+          </style>
+    </head>
+    <body>
+        <div class="container">
+            <center>
+            <h1>Course Registration Form</h1>
+            <form>
+                <fieldset>
+                    <legend align="center" style="font-size: 30px;">
+                        Personal Information</legend>
+                        <br>
+                        <table>
+                            <tr>
+                                <td><lable>Full Name:</lable></td>
+                                <td><input type="text" name="name" id="name" required></td>
+                            </tr>
+                            <tr>
+                                <td>Gender:</td>
+                                <td>
+                                    <label><input type="radio" name="gender" value="Male">Male</label>
+                                    <label><input type="radio" name="gender" value="Female">Female</label>
+                                    <label><input type="radio" name="gender" value="Other">Other</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Date of Birth:</td>
+                                <td><input type="date" name="dob" required></td>
+                            </tr>
+                            <tr>
+                                <td>Address:</td>
+                                <td><textarea name="Address" rows="3" required></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Phone Number:</td>
+                                <td><input type="number" name="phone" required></td>
+                            </tr>
+                            <tr>
+                                <td>Guardian's Name:</td>
+                                <td><input type="text" name="guardian"></td>
+                            </tr>
+                            <tr>
+                                <td>Hobbies:</td>
+                                <td><textarea name="hobbies" rows="3"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Ex.CA:</td>
+                                <td>
+                                    <ul style="list-style-type: none;">
+                                    <li><input type="checkbox" name="sports">Sports</li>
+                                    <li><input type="checkbox" name="music">Music</li>
+                                    <li><input type="checkbox" name="art">Art</li>
+                                    <li><input type="checkbox" name="dance">Dance</li>
+                                  </ul>
+                                </td>
+                            </tr>
+                        </table>
+                </fieldset>
+                <br><br>
+                <fieldset>
+                    <legend align="center" style="font-size: 30px;">Course Selection</legend>
+                    <div class="Course-selection">
+                          <!-- <h3>Courses:</h3> -->
+                          <ul style="list-style-type: none;">
+                            <input type="checkbox" name="course" value="BA">BA   
+                            <input type="checkbox" name="course" value="BSc">BSc.   
+                            <input type="checkbox" name="course" value="BCA">BCA
+                           </ul>
+                    </div>     
+                </fieldset>
+                <fieldset>
+                    <legend align="center" style="font-size: 30px;">Office Use Only</legend>
+                    <div class="office-use">
+                        <p>Remarks/Admission No.:</p>
+                        <textarea rows="5"></textarea>
+                    </div>
+                </fieldset>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </center>
+    </body>
+</html>
